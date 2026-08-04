@@ -1,0 +1,40 @@
+LIST P=16F690
+
+#include <P16F690.INC>
+
+__CONFIG
+
+CBLOCK
+ENDC
+
+ORG 0X0000
+GOTO MAIN
+
+ORG 0X0004
+RETFIE
+
+MAIN
+
+CALL Inicializa
+
+LOOP
+
+CALL LerSelect
+CALL LerEnter
+CALL AtualizaDisplay
+
+GOTO LOOP
+
+Inicializa
+RETURN
+
+LerSelect
+RETURN
+
+LerEnter
+RETURN
+
+AtualizaDisplay
+RETURN
+
+END
